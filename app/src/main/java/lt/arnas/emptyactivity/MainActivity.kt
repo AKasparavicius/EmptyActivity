@@ -1,5 +1,6 @@
 package lt.arnas.emptyactivity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -38,8 +39,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         openButton.setOnClickListener {
-            Log.i(TAG, "onCreate: just clicked OPEN button")
-
+            var openIntent = Intent(this, SecondActivity::class.java)
+            startActivity(openIntent)
         }
 
     }
