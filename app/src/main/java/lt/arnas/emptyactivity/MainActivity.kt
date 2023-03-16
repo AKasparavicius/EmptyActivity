@@ -3,6 +3,7 @@ package lt.arnas.emptyactivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.delay
@@ -19,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         val myTextView: TextView = findViewById(R.id.myTextView)
         Log.i(TAG, "onCreate: ${myTextView.text}")
         myTextView.visibility
+
+        val openButton: Button = findViewById(R.id.openButton)
 
         myTextView.setText("Sveikas pasauli!")
         Log.i(TAG, "onCreate: ${getString(R.string.say_hello)} " + "Sveikas pasauli!".toString())
