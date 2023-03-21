@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import javax.security.auth.login.LoginException
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         openButton.setOnClickListener {
+            Log.i(TAG, "onCreate: test")
             var openIntent = Intent(this, SecondActivity::class.java)
             startActivity(openIntent)
         }
